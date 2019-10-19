@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 require('express-group-routes');
 
 const app = express();
-const port = 5000;
+//const port = 5000;
 const { authenticated } = require('./middleware');
 
 
@@ -62,4 +62,4 @@ app.group('/api/v1', (router) => {
   router.delete('/user/:idU/webtoon/:idM/episode/:idE/image/:id', authenticated, ImgEpisodeController.DeleteImgEpisode);
 });
 
-app.listen(port, () => console.log(`Server running on port ${port}!`));
+app.listen(process.env.port||9876,function(){console.log('Listening on Our port!')});
