@@ -33,6 +33,8 @@ app.group('/api/v1', (router) => {
   // Api Webtoon isFavorite pemanggilan /favorite/?isFavorite=true
   router.get('/favorite', authenticated, ShowFavoriteController.ShowWebtonFavorite);
 
+  router.get('/webtoons', WebtoonController.index);
+
   router.get('/webtoon', WebtoonController.ShowSearchWebtoon); // /webtoons?title=blala
 
   router.get('/user/:id/webtoon', authenticated, WebtoonController.ShowWebtoonCreation);
