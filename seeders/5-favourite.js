@@ -6,17 +6,23 @@ module.exports = {
       {
         id_users: 1,
         id_masters: 1,
-        is_favorite: 1
+        is_favorite: 1,
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
         id_users: 1,
         id_masters: 2,
-        is_favorite: 1
+        is_favorite: 1,
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
         id_users: 2,
         id_masters: 1,
-        is_favorite: 1
+        is_favorite: 1,
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
     ], {});
   },

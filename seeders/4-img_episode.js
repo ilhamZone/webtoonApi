@@ -8,21 +8,27 @@ module.exports = {
         image: 'https://swebtoon-phinf.pstatic.net/20180815_168/1534306363709DyFxg_JPEG/11_EC8DB8EB84A4EC9DBC_mobile.jpg',
         created_by: 1,
         masters_id: 1,
-        episodes_id: 1
+        episodes_id: 1,
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
         page: 1,
         image: 'https://vignette.wikia.nocookie.net/webtoon/images/9/91/True_Beauty.jpg/revision/latest?cb=20181031181903',
         created_by: 2,
         masters_id: 1,
-        episodes_id: 1
+        episodes_id: 1,
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
         page: 2,
         image: 'https://swebtoon-phinf.pstatic.net/20180815_168/1534306363709DyFxg_JPEG/11_EC8DB8EB84A4EC9DBC_mobile.jpg',
         created_by: 1,
         masters_id: 1,
-        episodes_id: 2
+        episodes_id: 2,
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
     ], {});
   },
