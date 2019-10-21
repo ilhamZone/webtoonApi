@@ -9,8 +9,6 @@ module.exports = {
         created_by: 1,
         masters_id: 1,
         episodes_id: 1,
-        createdAt: new Date(),
-        updatedAt: new Date()
       },
       {
         page: 1,
@@ -18,8 +16,6 @@ module.exports = {
         created_by: 2,
         masters_id: 1,
         episodes_id: 1,
-        createdAt: new Date(),
-        updatedAt: new Date()
       },
       {
         page: 2,
@@ -27,8 +23,6 @@ module.exports = {
         created_by: 1,
         masters_id: 1,
         episodes_id: 2,
-        createdAt: new Date(),
-        updatedAt: new Date()
       },
     ], {});
   },
