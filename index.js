@@ -21,7 +21,9 @@ app.group('/api/v1', (router) => {
   // Api Users
   router.get('/users', UserController.index);
 
-  // Api Episodes berdasarkan id
+  router.get('/webtoon/:idW/episode', EpisodeController.showEpisode);
+
+  // Api Episodes berdasarkan id webtoon dan user
   router.get('/user/:idU/webtoon/:idW/episode', EpisodeController.show);
   
   // Api Auth

@@ -6,10 +6,15 @@ exports.index = (req, res) => {
   Episodes.findAll().then(result => res.send(result));
 };
 
-//tampil episode berdasarkan id_master
+// tampil episode berdasarkan id_masters
+exports.showEpisode = (req, res) => {
+  Episodes.findAll({ where: { masters_id: req.params.idW } })
+    .then(result => res.send(result));
+};
+//tampil episode berdasarkan id_master dan id user
 exports.show = (req, res) => {
   Episodes.findAll({ where: { masters_id: req.params.idW, created_by: req.params.idU } })
-  .then(result => res.send(result));
+    .then(result => res.send(result));
 };
 
 exports.CreateMyEpisode = (req, res) => {
