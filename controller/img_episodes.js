@@ -2,21 +2,6 @@ const models = require('../models');
 
 const ImgEpisodes = models.img_episode;
 
-// Show Page episode berdasarkan episode
-// exports.ImgEpsShow2 = (req, res) => {
-//   Episodes.findOne({ where: { masters_id: req.params.id } }).then(episode => {
-//     ImgEpisodes.findAll({
-//       where: { episodes_id: episode.id },
-//       attributes: ['id', 'page', 'image'],
-//       include: [{
-//         model: Episodes,
-//         as: 'Episode',
-//         attributes: ['id', 'title']
-//       }]
-//     }).then(result => res.send(result));
-//   });
-// };
-
 // show image berdasarkan id webtoon dan id episode
 exports.ShowImgEps = (req, res) => {
   ImgEpisodes.findAll({
