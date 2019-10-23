@@ -20,7 +20,9 @@ app.use(bodyParser.json());
 app.group('/api/v1', (router) => {
   // Api Users
   router.get('/users', UserController.index);
-
+  
+  router.get('/episodes', EpisodeController.index);
+  
   // Api Episodes berdasarkan id
   router.get('/user/:idU/webtoon/:idW/episode', EpisodeController.show);
   
