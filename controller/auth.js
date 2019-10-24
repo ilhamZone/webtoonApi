@@ -18,7 +18,7 @@ exports.login = (req, res) => {
     } else {
       res.send({
         error: true,
-        message: 'Wrong'
+        message: 'Password or Email is Wrong..'
       });
     }
   });
