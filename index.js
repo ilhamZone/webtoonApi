@@ -37,7 +37,7 @@ app.group('/api/v1', (router) => {
   router.post('/register', AuthController.register);
 
   // Api Webtoon isFavorite pemanggilan /favorite/?isFavorite=true
-  router.get('/favorite', authenticated, ShowFavoriteController.ShowWebtonFavorite);
+  //router.get('/favorite', authenticated, ShowFavoriteController.ShowWebtonFavorite);
 
   router.get('/webtoons', WebtoonController.index);
 
