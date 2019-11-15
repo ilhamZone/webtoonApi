@@ -8,6 +8,6 @@ exports.ShowFavorites = (req, res) => {
       model: Masters,
       as: 'Comics' 
     }],
-    //where: { id_users: req.params.user_id }
+    where: { id_users: req.params.user_id }
   }).then(result => res.send(result)).catch(err => res.send(err));
 }
