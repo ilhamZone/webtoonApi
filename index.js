@@ -14,6 +14,7 @@ const EpisodeController = require('./controller/episodes');
 const AuthController = require('./controller/auth');
 const ImgEpisodeController = require('./controller/img_episodes');
 const ShowFavoriteController = require('./controller/favorites');
+const FavoriteController = require('./controller/favorites');
 
 app.use(bodyParser.json());
 
@@ -67,6 +68,8 @@ app.group('/api/v1', (router) => {
   router.post('/user/:idU/webtoon/:idM/episode/:idE/image', authenticated, ImgEpisodeController.StoreImgEpisode);
 
   router.delete('/user/:idU/webtoon/:idM/episode/:idE/image/:id', authenticated, ImgEpisodeController.DeleteImgEpisode);
+   
+  router.get('/webtoon/users', authenticated, FavoriteController.ShowFavorites);
 });
 
 app.listen(process.env.PORT||9876,function(){console.log('Listening on Our port!')});

@@ -8,6 +8,14 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   master.associate = function(models) {
     // associations can be defined here
+    master.belongsTo(models.user, {
+      as: 'CreatedBy',
+      foreignKey: 'created_by'
+    });
+    master.hasOne(models.favourite, {
+      foreignKey: 'id',
+      as: 'Favorite',
+    });
   };
   return master;
 };

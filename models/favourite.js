@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: 'id_users'
     });
     favourite.belongsTo(models.master, {
-      as: 'Master',
+      as: 'Comics',
       foreignKey: 'id_masters'
     });
   };
